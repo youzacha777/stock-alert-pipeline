@@ -122,6 +122,7 @@
     "signals": []
   }
 }
+```
 ---
 ### 4️⃣ 워크플로우 오케스트레이션
 
@@ -131,3 +132,28 @@
 **DAG 흐름**
 ```jsx
 create_output_dir → analyze_stocks(Spark 실행) → process_results → send_report(Slack)
+```
+---
+### 🧰 사용 기술 요약
+
+| 구분 | 기술 스택 |
+| --- | --- |
+| 데이터 수집 | yfinance, kafka-python |
+| 스트림 처리 | Kafka, PostgreSQL |
+| 분석 | PySpark, Pandas |
+| 워크플로우 | Apache Airflow |
+| 알림 | Slack Webhook, requests |
+---
+
+## 🚀 성과 및 개선
+
+**성과**
+- 실시간 주가 알림 시스템 완전 자동화  
+- 일일 보고서 Slack 자동 발송 성공  
+- PostgreSQL 데이터 적재 안정성 99% 이상 유지  
+
+**개선 방향**
+- 이메일 리포트 기능 확장 (HTML 템플릿)  
+- 경제 뉴스 스크랩을 통해 알림 서비스 다각화  
+- 장기 추세 분석용 시각화 대시보드 구축 (Streamlit or LookerStudio)
+
