@@ -1,0 +1,13 @@
+# Python 캐시 파일
+__pycache__/
+*.pyc
+
+# 로그 파일
+*.log
+logs/
+data/
+
+# 빌드/의존성 파일
+jars/
+.ivy2/
+

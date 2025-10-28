@@ -1,0 +1,22 @@
+# Dockerfile.spark
+FROM bitnami/spark:latest
+
+# root 권한으로 필요한 패키지 설치
+USER root
+
+# requirements.txt 복사 및 설치
+RUN pip install python-dotenv pyspark pandas numpy matplotlib scikit-learn kafka-python
+
+
+# curl 설치
+RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*
+
+# PostgreSQL JDBC 드라이버 다운로드 (예: 버전 42.6.0)
+RUN curl -L -o /opt/bitnami/spark/jars/postgresql-42.6.0.jar \
+    https://jdbc.postgresql.org/download/postgresql-42.6.0.jar
+
+# spark 유저를 /etc/passwd에 영구 등록
+RUN echo "spark:x:1001:1001:Spark User:/opt/bitnami/spark:/bin/bash" >> /etc/passwd
+
+# spark 유저로 돌아가기
+USER 1001
