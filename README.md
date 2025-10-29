@@ -145,7 +145,7 @@ create_output_dir → analyze_stocks(Spark 실행) → process_results → send_
 | 알림 | Slack Webhook, requests |
 ---
 
-## 🚀 성과 및 개선
+## 🚀 성과 및 개선 방
 
 **성과**
 - 실시간 주가 알림 시스템 완전 자동화  
@@ -157,3 +157,6 @@ create_output_dir → analyze_stocks(Spark 실행) → process_results → send_
 - 경제 뉴스 스크랩을 통해 알림 서비스 다각화  
 - 장기 추세 분석용 시각화 대시보드 구축 (Streamlit or LookerStudio)
 
+## 참고
+- Notion
+  - https://www.notion.so/277ad6468ffc801d9c03ce89e2865785?source=copy_link
