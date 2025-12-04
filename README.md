@@ -145,7 +145,7 @@ create_output_dir → analyze_stocks(Spark 실행) → process_results → send_
 | 알림 | Slack Webhook, requests |
 ---
 
-## 🚀 성과 및 개선 방
+## 🚀 성과 및 개선 방안
 
 **성과**
 - 실시간 주가 알림 시스템 완전 자동화  
